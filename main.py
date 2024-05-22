@@ -25,8 +25,6 @@ async def on_ready():
     print(f'Logged in as {bot.user.name} ({bot.user.id})')
     print('------')
 
-
-
 class Math(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
