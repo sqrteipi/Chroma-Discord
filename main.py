@@ -34,7 +34,7 @@ class Programming(commands.Cog):
         self.bot = bot
 
     @commands.command(name='task_help', brief='Provide tutorial for Competitive Programming tasks')
-    async def task_help(ctx, task):
+    async def task_help(self, ctx, task):
         if hasattr(hkoi_tutorial, task):
             await ctx.send(getattr(hkoi_tutorial, task))
         else:
