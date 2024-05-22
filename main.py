@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 
 # Define your desired intents
-intents = discord.Intents.default()
+intents = discord.Intents.all()
 intents.typing = False  # Disable receiving typing events
 intents.presences = False  # Disable receiving presence update events
 
