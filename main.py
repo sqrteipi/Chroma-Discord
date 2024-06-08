@@ -30,8 +30,8 @@ class Gaming(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name='Wordle', brief='Playing Wordle')
-    async def wordle(self, ctx, word):
+    @commands.command(name='wordle', brief='Play Wordle.')
+    async def wordle(self, ctx, word=None):
         await ctx.send("Start!")
 
 class Math(commands.Cog):
@@ -51,6 +51,7 @@ class Programming(commands.Cog):
 
 async def main():
     # Add the cogs to the bot
+    await bot.add_cog(Gaming(bot))
     await bot.add_cog(Math(bot))
     await bot.add_cog(Programming(bot))
 
